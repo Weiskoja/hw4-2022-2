@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16pt; /* test for this! Make all sizes em or rem */
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    background-image: url("/images/concrete_seamless.png");
+  }
+  
+header{
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  
+h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  
+p {
+    padding: 0 30px;
+  }
+
+#logo {
+   animation: logoMove 5s;
+   width: 475px;
+}
+
+@keyframes logoMove{
+    0%{
+        width:25px;
+        opacity: 0;
+    }
+    100%{
+        width: 475px;
+        opacity: 1;
+    }
+} 
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+*:focus{
+    border: 2px solid black;
+  }
+
+
+.nav_item a, .nav_item a:visited{
+    padding: 10px;
+    color: #0000ff;
+    display: flex;
+  }
+  
+.nav_item a:hover, a:focus{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+.pricing{
+    min-height: 475px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+  }
+.pricing header{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.card {
+    margin: 12px;
+    background: #fff;
+    border: solid 0px white;
+    border-radius: 7px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 0 0 25px 0;
+    display: flex;
+    flex-flow: column;
+    flex: auto auto 450px;
+  }
+
+.card > ul{
+    list-style: none;
+    padding-left: 5px;
+  }
+  
+.card > ul li{
+    width: 90%;
+    margin: 20px auto;
+  }
+
+.card > ul li:first-child {
+    text-align: center;
+  }
+
+.card button{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    margin-left: 5%;
+    border-radius: 7px;
+    background: #288080;
+    color: white;
+    font-size: 1em;
+  }
+ 
+.card h3{
+    width: 100%;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+    background-color: #288088;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid 2px #45ADAD;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 1em;
+}
+.gallery img{
+    display: flex;
+    border: solid 10px #50C7C7;
+    width: 300px;
+    margin: 10px;
+  }
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+
+@media screen and (min-width:900px) {
+    header{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: none;
+        justify-content:space-between;
+        width: 100%;
+    }
+    .nav_item{
+        display: inline-flex;
+        flex-flow: row;
+        max-height: 100%;
+        flex-flow: row;
+        justify-items: flex-end;
+    }
+    .pricing{
+        padding: 3em;
+        display: inline-flex;
+        flex-flow: row;
+        justify-items: center;
+        align-items: center;
+        padding:1em;
+      }
+    .card{
+        margin: 12px;
+        text-align: center;
+        flex-basis:content;
+    }
+    .card header{
+        text-align: center;
+    }
+  }
